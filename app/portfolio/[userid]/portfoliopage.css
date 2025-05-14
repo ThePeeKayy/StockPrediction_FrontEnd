@@ -1,0 +1,26 @@
+.card {
+    background: linear-gradient(135deg, #ffffff, #f7fcfc, #ffffff, #f7fcfc, #ffffff, #ffffff);
+    border-radius: 15px;
+    box-shadow: 2px 2px 9px #e4e1e1, -3px -3px 5px #ffffff;
+    position: flex;
+  }
+  
+
+  
+  .card h4 {
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+  
+  .card-content {
+    padding: 1rem;
+  }
+  
+  .card-content .text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
