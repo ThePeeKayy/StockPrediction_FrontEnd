@@ -19,15 +19,6 @@ import { usePathname } from "next/navigation";
 import logo from '../../public/stocklylogo.png'
 import Image from 'next/image'
 
-
-const teams = [
-  { id: 1, name: 'Stock 1', href: '#', initial: 'H'},
-  { id: 2, name: 'Stock 2', href: '#', initial: 'T'},
-  { id: 3, name: 'Stock 3', href: '#', initial: 'W' },
-]
-
-
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
@@ -81,7 +72,6 @@ export default function Example() {
                   </button>
                 </div>
               </TransitionChild>
-              {/* Sidebar component, swap this element with another sidebar if you like */}
               <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-2">
                 <div className="flex h-16 shrink-0 pr-8 justify-center items-center">
                   <Image
@@ -119,34 +109,7 @@ export default function Example() {
                       </ul>
                     </li>
                     <li>
-                      <div className="text-xs font-semibold leading-6 text-gray-400">Stocks:</div>
-                      <ul role="list" className="-mx-2 mt-2 space-y-1">
-                        {teams.map((team) => (
-                          <li key={team.name}>
-                            <a
-                              href={team.href}
-                              className={classNames(
-                                team.current
-                                  ? 'bg-gray-50 text-blue-500'
-                                  : 'text-gray-700 hover:bg-gray-50 hover:text-blue-500',
-                                'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6',
-                              )}
-                            >
-                              <span
-                                className={classNames(
-                                  team.current
-                                    ? 'border-blue-500 text-blue-500'
-                                    : 'border-gray-200 text-gray-400 group-hover:border-blue-500 group-hover:text-blue-500',
-                                  'flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border bg-white text-[0.625rem] font-medium',
-                                )}
-                              >
-                                {team.initial}
-                              </span>
-                              <span className="truncate">{team.name}</span>
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
+                      
                     </li>
                   </ul>
                 </nav>
@@ -155,9 +118,7 @@ export default function Example() {
           </div>
         </Dialog>
 
-        {/* Static sidebar for desktop */}
         <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
-          {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6">
             <div className="flex h-16 shrink-0 justify-center pr-8 items-center">
               <Image
@@ -195,34 +156,7 @@ export default function Example() {
                   </ul>
                 </li>
                 <li>
-                  <div className="text-xs font-semibold leading-6 text-gray-400">Stocks:</div>
-                  <ul role="list" className="-mx-2 mt-2 space-y-1">
-                    {teams.map((team) => (
-                      <li key={team.name}>
-                        <a
-                          href={team.href}
-                          className={classNames(
-                            team.current
-                              ? 'bg-gray-50 text-blue-500'
-                              : 'text-gray-700 hover:bg-gray-50 hover:text-blue-500',
-                            'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6',
-                          )}
-                        >
-                          <span
-                            className={classNames(
-                              team.current
-                                ? 'border-blue-500 text-blue-500'
-                                : 'border-gray-200 text-gray-400 group-hover:border-blue-500 group-hover:text-blue-500',
-                              'flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border bg-white text-[0.625rem] font-medium',
-                            )}
-                          >
-                            {team.initial}
-                          </span>
-                          <span className="truncate">{team.name}</span>
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
+                  
                 </li>
                 <li className="-mx-6 mt-auto">
                   <div
@@ -283,7 +217,7 @@ export default function Example() {
         </div>
 
         <main className="py-4 lg:pl-72">
-          <div className="px-4 sm:px-6 lg:px-8">{/* Your content */}</div>
+          <div className="px-4 sm:px-6 lg:px-8" />
         </main>
       </div>
     </>
